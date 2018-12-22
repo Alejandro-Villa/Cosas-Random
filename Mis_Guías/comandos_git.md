@@ -3,7 +3,8 @@
 - `~$: git init` Para que git comience a monitorizar lo que pasa en el directorio.
 - `~$: git commit -m "mensaje"` Para que git cree un commit con el mensaje `"mensaje"`.
 - `~$: git push origin master` Para que git suba al repositorio remoto los cambios que has hecho.
-- `~$: git add archivo` Para que git reconozca que estás haciendo coas con ese archivo, y siga los cambios. Sino no podrás hacer un commit.º
+- `~$: git add archivo` Para que git reconozca que estás haciendo coas con ese archivo, y siga los cambios. Sino no podrás hacer un commit.
+
 __Nota: para que estos cambios sirvan de algo en GitHub, hay que tener conectados los dos repos__
 
 Para conectar dos repos:
