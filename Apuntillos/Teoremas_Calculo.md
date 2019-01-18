@@ -6,9 +6,16 @@ author: "Alejandro Villanueva Prados"
 
 # Funciones 
 
-## Teorema de los ceros de Bolzano.
-_Toda función continua en un intervalo que toma valores positivos y negativos
-se anula en algún punto del intervalo_
+## Índice.
+
+ * [Teorema de los ceros de Bolzano.](#teorema-de-los-ceros-de-bolzano)
+ * [Teorema del valor intermedio.](#teorema-del-valor-intermedio-consecuencia-de-bolzano)	
+
+\pagebreak
+
+## Teorema de los ceros de Bolzano
+
+_Toda función continua en un intervalo que toma valores positivos y negativos se anula en algún punto del intervalo_
 
 **Demostración**
 
@@ -37,3 +44,15 @@ $$
 	* Demostración: La función $f:\mathbb{R}^{+}_0 \to \mathbb{R}$ tal que $f(x) = x^k - a$ es continua y con distinto signo entre $0$ y $1+a$, con lo cual $\exists c > 0: f(c)=0$. Este número es único porque $f$ es estrictamente creciente. (sea $\varepsilon > 0$, $f(x) < f(x+\varepsilon)$).
 
 2. Ceros de polinomio de grado impar: _Toda función polinómica de grado impar se anula en algún punto_
+
+**Demostración**: _WIP_
+
+\pagebreak
+
+## Teorema del valor intermedio consecuencia de Bolsano
+
+_La imagen de un intervalo por una función continua es un intervalo._
+
+**Demostración**
+
+1. Objetivo: Probar que dado $I \ne \emptyset, I \subset \mathbb{R}$, entonces $f(I) = J$ siendo $J$ un intervalo.
