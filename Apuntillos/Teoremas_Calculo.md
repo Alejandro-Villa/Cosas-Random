@@ -93,6 +93,12 @@ Además, se da el recíproco: si suponemos que la imagen de un intervalo por una
 
 2. La condición de Cauchy implica que existe $m_0 \in \mathbb{N}$ tal que $|x_p-x_{m_0}|<1$ para todo $p\ge m_0$. Manipulando la desigualdad se obtiene $|x_p|\le|x_p-x_{m_0}|+|x_{m_0}| \implies |x_p|<1+|x_{m_0}|$
 
-3. Definimos $M=máx\{|x_1|,|x_2|,\dots,|x_{m_0}|,1+|x_{m_0}|\}$. Así que obtenemos que $x_n\le M$ para todo $n\in\mathbb{N}$
+3. Definimos $M=máx\{|x_1|,|x_2|,\dots,|x_{m_0}|,1+|x_{m_0}|\}$. Así que obtenemos que $x_n\le M$ para todo $n\in\mathbb{N}$, por lo tanto, concluimos que $\{x_n\}$ está acotada.
 
-4. *WIP*
+4. Ahora, aplicamos el teorema de Bolzano-Weierstrass, que nos garantiza que existe una sucesión parcial que converge a $x\in\mathbb{R}$, a la que notamos como $\{x_{\sigma(n)}\}\to x \in \mathbb{R}$.Hemos de probar que $\{x_n\}$ también converge a $x$.
+
+5. Sea $\varepsilon > 0$, existe un cierto $n_0\in\mathbb{N}$ tal que $|x_p-x_q|<\frac{\varepsilon}{2}$ siempre que $p,q\ge n_0$ (Esto se obtiene aplicando la hipótesis de que $\{x_n\}$ es de Cauchy).También se tiene que existe $n_1\in\mathbb{N}$ tal que $|x_{\sigma(n)}-x|<\frac{\varepsilon}{2}$ (Porque la sucesión parcial es convergente a $x$). Si tomamos $m=máx\{n_0,n_1\}$, entonces para todo $n\ge m$ se tiene que $\sigma(n)\ge n \ge m$ por lo cual se verifican ambas igualdades. Las sumamos:
+
+$$
+|x_n - x|\le|x_n - x_{\sigma(n)}| + |x_{\sigma(n)} - x| < \frac{\varepsilon}{2}+\frac{\varepsilon}{2} = \varepsilon
+$$
