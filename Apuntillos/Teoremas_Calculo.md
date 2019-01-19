@@ -7,11 +7,14 @@ author: "Alejandro Villanueva Prados"
 # Funciones 
 
 ## Índice.
-
- * [Teorema de los ceros de Bolzano.](#teorema-de-los-ceros-de-bolzano)
- * [Teorema del valor intermedio.](#teorema-del-valor-intermedio-consecuencia-de-bolzano)	
+* [Sobre Funciones](#sobre-funciones)
+	* [Teorema de los ceros de Bolzano.](#teorema-de-los-ceros-de-bolzano)
+	* [Teorema del valor intermedio.](#teorema-del-valor-intermedio-consecuencia-de-bolzano)	
+* [Sobre Sucesiones](#sobre-sucesiones)
 
 \pagebreak
+
+# Sobre funciones
 
 ## Teorema de los ceros de Bolzano
 
@@ -37,6 +40,8 @@ $$
 
 6. Paso final: $f(c)=0$. A la izquierda de $c$, la función toma valores negativos, así que por la continuidad de $f$ y la conservación local del signo, no puede ser $f(c) > 0$, con lo cual $f(c) \le 0$, pero como a la derecha es positiva, no puede ser $f(c) < 0$, así que $f(c) \ge 0$ y **también** $f(c) \le 0$. Por tanto, $f(c) = 0$, con $c\in]a,b[$
 
+$\square$
+
 **Consecuencias**
 
 1. Existencia de raíces: _Dados $a>0$ y $k\in\mathbb{N}$ hay un único número $c>0$ tal que $c^k=a$, en otras palabras, $\log_c a = k$ es único._
@@ -49,10 +54,45 @@ $$
 
 \pagebreak
 
-## Teorema del valor intermedio consecuencia de Bolsano
+## Teorema del valor intermedio consecuencia de Bolzano
 
 _La imagen de un intervalo por una función continua es un intervalo._
 
 **Demostración**
 
 1. Objetivo: Probar que dado $I \ne \emptyset, I \subset \mathbb{R}$, entonces $f(I) = J$ siendo $J$ un intervalo.
+
+2. Sea un intervalo $I$ y $f: I \to \mathbb{R}$ continua. Probar el teorema equivale a probar que dados dos puntos cualesquiera de $J = f(I)$, todos los puntos entre ellos también pertenecen a $J$ (Definición de intervalo). Sean pues, $u, v: u < v$ elementos de $J$.
+
+3. Al ser $u$ y $v$ imágenes de puntos de $I$, deben existir $\alpha \in I: f(\alpha)=u$ y $\beta \in I : f(\beta)=v$, no puede ser $\alpha = \beta$ por ser $f$ función. Suponngamos que $\alpha <\beta$
+
+4. Tomamos un $z$ tal que $u < z < v$ y definimos $h: I \to \mathbb{R}$, $h(x) = z - f(x)$ para todo $x \in I$. $h$ es continua (composición de funciones continuas) en $I$.
+
+5. Ahora realizamos $h(\alpha)=z-f(\alpha)=z-u > 0$ (recordemos $z > u$). Del mismo modo $h(\beta) < 0$. Así que por el Teorema de los ceros de Bolzano, existe $\lambda$ tal que $\alpha < \lambda < \beta$ y $h(\lambda) = z - f(\lambda) = 0 \implies f(\lambda) = 0$
+
+6. Dado que $\lambda \in ]\alpha,beta[ \subset I$, debe ocurrir que $f(\lambda) = z \in J$ como esto ocurre para cualquier $u < z < v$, deducimos que $]u,v[ \subset J$ y que $J$ es un intervalo.
+
+$\square$
+
+Además, se da el recíproco: si suponemos que la imagen de un intervalo por una función continua es un intervalo, y la función toma valores positivos y negativos, entonces la función debe anularse en algún punto del intervalo.
+
+# Sobre sucesiones
+
+## Teorema de Complitud de $\mathbb{R}$. Límites superior e inferior.
+
+* **Definición**: Condición de Cauchy.
+	Se dice que una sucesión $\{x_n\}$ satisface la condición de Cauchy, si para cada númmero positivo $\varepsilon>0$, existe un número natural $m_\varepsilon$, tal que para todos $p,q\in \mathbb{N}$ con $p\ge m_\varepsilon$ y $q\ge m_\varepsilon$ se verifica que  $|x_p - x_q| < \varepsilon$
+
+**Teorema de Complitud de $\mathbb{R}$**
+
+*Una sucesión de números reales converge si, y sólo si, verifica la condición de Cauchy.*
+
+**Demostración**
+
+1. Partimos de $\{x_n\}$ cumple la condición de Cauchy. Vamos a probar que está acotada.
+
+2. La condición de Cauchy implica que existe $m_0 \in \mathbb{N}$ tal que $|x_p-x_{m_0}|<1$ para todo $p\ge m_0$. Manipulando la desigualdad se obtiene $|x_p|\le|x_p-x_{m_0}|+|x_{m_0}| \implies |x_p|<1+|x_{m_0}|$
+
+3. Definimos $M=máx\{|x_1|,|x_2|,\dots,|x_{m_0}|,1+|x_{m_0}|\}$. Así que obtenemos que $x_n\le M$ para todo $n\in\mathbb{N}$
+
+4. *WIP*
