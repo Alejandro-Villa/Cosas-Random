@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ $# == 1 ]
+	then
+	g++ -Wall $1 -o $1.o
+
+	./$1.o 2> /dev/null
+
+	rm -f $1.o
+	
+elif [ $# == 2 ]
+	then
+	if [ $1 == "-g" ]
+		then
+		g++ -Wall -g $2 -o $2.o
+	
+		gdb -q $2.o
+	fi
+	
+else
+
+	echo "Introduce el .cpp como argumento"
+fi

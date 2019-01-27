@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#sudo systemctl start bluetooth
+
+sleep 1
+
+if [ ! `pulseaudio --check` ]
+	then
+		pulseaudio --start
+fi
+
+sleep 1
+
+echo -e 'power on\nconnect 30:21:01:25:C6:F3' | bluetoothctl
+
+#sleep 2
+
+#echo -e 'quit' | bluetoothctl
